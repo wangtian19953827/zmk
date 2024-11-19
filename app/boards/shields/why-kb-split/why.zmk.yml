@@ -1,0 +1,12 @@
+file_format: "1"
+id: why-kb
+name: why-kb
+type: shield
+url: https://github.com/devilwhy/why-kb
+requires: [nrfmicro_13_52840]
+features:
+  - keys
+siblings:
+  - why_left
+  - why_right
+
