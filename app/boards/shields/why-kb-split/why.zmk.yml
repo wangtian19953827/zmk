@@ -3,7 +3,7 @@ id: why-kb
 name: why-kb
 type: shield
 url: https://github.com/devilwhy/why-kb
-requires: [pro_micro]
+requires: [nrfmicro_13]
 features:
   - keys
 siblings:
