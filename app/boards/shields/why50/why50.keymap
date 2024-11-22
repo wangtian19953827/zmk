@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+
+/ {
+	keymap0: keymap {
+		compatible = "zmk,keymap";
+
+		   layer_0 {
+            bindings = <
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8       &kp NUMBER_9  &kp NUMBER_0			
+  &kp Q            &kp W         &kp E         &kp R        &kp T         &kp Y    &kp U            &kp I      &kp O      &kp P
+  &kp A           &kp S         &kp D         &kp F        &kp G         &kp H    &kp J            &kp K      &kp L       &kp ENTER
+  &kp Z           &kp X         &kp C         &kp V        &kp B         &kp N    &kp M            &kp COMMA  &kp DOT    &kp SLASH
+  &kp LCTRL         &lt 5 LEFT_GUI    &kp LEFT_ALT  &mo 1   &kp SPACE    &kp BACKSPACE  &mo 2  &mo 3    &mo 4  &kp DELETE
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+  &kp ESC          &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8       &kp NUMBER_9  &kp NUMBER_0			
+  &kp GRAVE        &kp AT_SIGN    &kp HASH   &kp DOLLAR  &kp PERCENT      &kp CARET  &kp AMPS       &kp ASTRK     &kp LPAR       &kp RPAR
+  &kp TAB          &kp MINUS      &kp EQUAL  &kp UNDER   &kp BSLH         &kp LBKT   &kp RBKT       &kp LBRC      &kp RBRC       &kp COLON
+  &kp LSHIFT       &kp LC(LG(A))  &kp LC(C)  &kp LC(V)   &kp LS(LG(N))    &none      &none          &kp LC(LEFT)  &kp LC(RIGHT)  &kp QMARK
+  &kp LCTRL        &bootloader    &kp ENTER  &none       &kp BACKSPACE    &none      &kp BACKSPACE  &none         &kp CAPS       &none
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none  &none    &none  &none
+  &none
+  &none      &none         &none         &none          &none           &kp C_VOL_DN  &kp C_VOL_UP  &kp DOUBLE_QUOTES  &kp SQT       &kp COLON
+  &none     &xxpass       &cxm          &kp LC(LG(F))  &none           &xxfufe       &out OUT_TOG  &trans             &kp DOT       &kp QUESTION
+  &trans        &trans        &trans        &trans         &trans          &trans        &trans        &trans             &trans        &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5         &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+  &none   &none   &trans  &trans      &trans         &kp F14       &kp F15       &trans        &kp F11       &kp F12
+  &trans  &trans  &none   &none       &trans         &trans  &trans  &none   &none       &trans 
+  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader   &sys_reset    &trans        &trans        &bt BT_CLR
+            >;
+        };
+	};
+};
